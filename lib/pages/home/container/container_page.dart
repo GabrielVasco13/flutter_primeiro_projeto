@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class ContainerPage extends StatelessWidget {
@@ -8,6 +10,7 @@ class ContainerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Exemplo de container'),
+        backgroundColor: Colors.black87,
       ),
       body: Center(
         child: Container(
