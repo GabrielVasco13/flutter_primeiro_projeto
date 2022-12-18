@@ -6,6 +6,11 @@ enum PopupMenuPages {
   container,
   rows_columns,
   media_query,
+  layout_builder,
+  botoes_rotacao_texto_page,
+  scrolls_single_child,
+  listview,
+  dialogs
    }
 
 class HomePage extends StatelessWidget {
@@ -23,11 +28,11 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nusbank'),
+        title: const Text('Nubank'),
         backgroundColor: Colors.purple[700],
         actions: [
           PopupMenuButton<PopupMenuPages>(
-            icon: Icon(Icons.insert_chart_outlined_sharp),
+            icon: Icon(Icons.account_circle_sharp),
             tooltip: 'Selecione os seus dados',
             onSelected: (PopupMenuPages valueSelected) {
               switch (valueSelected) {
@@ -39,6 +44,21 @@ class HomePage extends StatelessWidget {
                   break;
                 case PopupMenuPages.media_query:
                   Navigator.of(context).pushNamed('/media_query');
+                  break;
+                case PopupMenuPages.layout_builder:
+                  Navigator.of(context).pushNamed('/layout_builder');
+                  break;
+                case PopupMenuPages.botoes_rotacao_texto_page:
+                  Navigator.of(context).pushNamed('/botoes_rotacao_texto');
+                  break;
+                case PopupMenuPages.scrolls_single_child:
+                  Navigator.of(context).pushNamed('/scrolls/single_child');
+                  break;
+                case PopupMenuPages.listview:
+                  Navigator.of(context).pushNamed('/scrolls/listview_page');
+                  break;
+                case PopupMenuPages.dialogs:
+                  Navigator.of(context).pushNamed('/dialogs');
                   break;
               }
             },
@@ -55,7 +75,27 @@ class HomePage extends StatelessWidget {
               PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.media_query,
                 child: Text('MediaQuery'),
-                )
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.layout_builder,
+                child: Text('Layout Builder'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.botoes_rotacao_texto_page,
+                child: Text('Botoes rotacao texto'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.scrolls_single_child,
+                child: Text('Scrolls SingleChild'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.listview,
+                child: Text('ListView'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.dialogs,
+                child: Text('Dialogs'),
+                ),
             ];
           })
         ],
