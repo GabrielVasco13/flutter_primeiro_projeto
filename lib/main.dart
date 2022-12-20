@@ -30,7 +30,18 @@ class MyApp extends StatelessWidget {
       title: 'Nubank sem api',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.purple[700],
+        primaryColorLight: Colors.amber,
+        primaryColorDark: Colors.blueGrey[700],
+        
+        // fontFamily: 'Roboto', font de texto padrão
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.yellowAccent,
+          )
+        )
+
       ),
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,

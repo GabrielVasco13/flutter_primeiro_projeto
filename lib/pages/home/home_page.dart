@@ -101,16 +101,28 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: 
-      Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              color: Colors.purple[100],
-              width: mediaQuery.size.width , //tamanho
-              height: heightBody, //largura
-            ),
-          ]
+      Theme(
+        data: ThemeData(primaryColor: Colors.blue), 
+        // data: Theme.of(contex).copyEith(
+        // primaryColor: Colors.red
+        // ),
+        // depois apaga o theme data de cima e faz o teste 
+
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('Botão X'),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Theme.of(context).primaryColor,
+              )
+            ],
+          ),
         ),
       )
     );
