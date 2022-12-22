@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/botoes_rota%C3%A7%C3%A3o_texto/botoes_rotacao_texto_page.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
 import 'package:flutter_primeiro_projeto/pages/dialogs/dialogs_page.dart';
+import 'package:flutter_primeiro_projeto/pages/form/form_page.dart';
 import 'package:flutter_primeiro_projeto/pages/home/home_page.dart';
 import 'package:flutter_primeiro_projeto/pages/layout_builder/layout_builder_page.dart';
 import 'package:flutter_primeiro_projeto/pages/media_query/media_query_pages.dart';
@@ -11,6 +12,7 @@ import 'package:flutter_primeiro_projeto/pages/rows_columns/rows_column_page.dar
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_pages.dart';
+import 'package:flutter_primeiro_projeto/pages/snackbar/snackbar_page.dart';
 
 void main() {
   runApp(
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
 
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.yellowAccent,
+            backgroundColor: Colors.purple,
           )
         )
 
@@ -55,6 +57,8 @@ class MyApp extends StatelessWidget {
         '/scrolls/single_child': (_) => SinglechildscrollviewPages(),
         '/scrolls/listview_page': (_) => ListviewPage(),
         '/dialogs': (_) => DialogsPage(),
+        '/snackbar': (_) => SnackbarPage(),
+        '/form': (_) => FormPage(),
       },
     );
   }

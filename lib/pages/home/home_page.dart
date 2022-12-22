@@ -3,14 +3,16 @@
 import 'package:flutter/material.dart';
 
 enum PopupMenuPages { 
-  container,
-  rows_columns,
-  media_query,
-  layout_builder,
-  botoes_rotacao_texto_page,
-  scrolls_single_child,
-  listview,
-  dialogs
+    container,
+    rows_columns,
+    media_query,
+    layout_builder,
+    botoes_rotacao_texto_page,
+    scrolls_single_child,
+    listview,
+    dialogs,
+    snackbar,
+    form,
    }
 
 class HomePage extends StatelessWidget {
@@ -38,28 +40,34 @@ class HomePage extends StatelessWidget {
               switch (valueSelected) {
                 case PopupMenuPages.container:
                   Navigator.of(context).pushNamed('/container');
-                  break;
+                break;
                 case PopupMenuPages.rows_columns:
                   Navigator.of(context).pushNamed('/rows_columns');
-                  break;
+                break;
                 case PopupMenuPages.media_query:
                   Navigator.of(context).pushNamed('/media_query');
-                  break;
+                break;
                 case PopupMenuPages.layout_builder:
                   Navigator.of(context).pushNamed('/layout_builder');
-                  break;
+                break;
                 case PopupMenuPages.botoes_rotacao_texto_page:
                   Navigator.of(context).pushNamed('/botoes_rotacao_texto');
-                  break;
+                break;
                 case PopupMenuPages.scrolls_single_child:
                   Navigator.of(context).pushNamed('/scrolls/single_child');
-                  break;
+                break;
                 case PopupMenuPages.listview:
                   Navigator.of(context).pushNamed('/scrolls/listview_page');
-                  break;
+                break;
                 case PopupMenuPages.dialogs:
                   Navigator.of(context).pushNamed('/dialogs');
-                  break;
+                break;
+                case PopupMenuPages.snackbar:
+                  Navigator.of(context).pushNamed('/snackbar');
+                break;
+                case PopupMenuPages.form:
+                  Navigator.of(context).pushNamed('/form');
+                break;
               }
             },
             itemBuilder: (BuildContext context) {
@@ -96,16 +104,24 @@ class HomePage extends StatelessWidget {
                 value: PopupMenuPages.dialogs,
                 child: Text('Dialogs'),
                 ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.snackbar,
+                child: Text('SnackBar'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.form,
+                child: Text('Formulario'),
+                ),
             ];
           })
         ],
       ),
       body: 
       Theme(
-        data: ThemeData(primaryColor: Colors.blue), 
-        // data: Theme.of(contex).copyEith(
-        // primaryColor: Colors.red
-        // ),
+        //data: ThemeData(primaryColor: Colors.blue), 
+        data: Theme.of(context).copyWith(
+        primaryColor: Colors.red
+        ),
         // depois apaga o theme data de cima e faz o teste 
 
         child: Center(
@@ -120,6 +136,11 @@ class HomePage extends StatelessWidget {
                 height: 100,
                 width: 100,
                 color: Theme.of(context).primaryColor,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Theme.of(context).primaryColorDark,
               )
             ],
           ),
