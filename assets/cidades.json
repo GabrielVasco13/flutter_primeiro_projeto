@@ -1,0 +1,30 @@
+[
+  {
+    "cidade": "Recife",
+    "Estado": "Pernambuco"
+  },
+  {
+    "cidade": "São Paulo",
+    "Estado": "São Paulo"
+  },
+  {
+    "cidade": "Salvador",
+    "Estado": "Bahia"
+  },
+  {
+    "cidade": "Ceará",
+    "Estado": "Fortaleza"
+  },
+  {
+    "cidade": "Minas Gerais",
+    "Estado": "Belo Horizonte"
+  },
+  {
+    "cidade": "Amazonas",
+    "Estado": "Manaus"
+  },
+  {
+    "cidade": "Itaqua",
+    "Estado": "São Paulo"
+  }
+]

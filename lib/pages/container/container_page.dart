@@ -10,7 +10,6 @@ class ContainerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Exemplo de container'),
-        backgroundColor: Colors.black87,
       ),
       body: Center(
         child: Container(

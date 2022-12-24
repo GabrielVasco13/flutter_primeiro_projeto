@@ -13,6 +13,7 @@ enum PopupMenuPages {
     dialogs,
     snackbar,
     form,
+    cidades,
    }
 
 class HomePage extends StatelessWidget {
@@ -21,12 +22,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mediaQuery = MediaQuery.of(context);
+    //final mediaQuery = MediaQuery.of(context);
 
-    final statusBar = mediaQuery.padding.top;
-    final heightBody = mediaQuery.size.height - statusBar - kToolbarHeight;
-
-    print(heightBody);
+    //final statusBar = mediaQuery.padding.top;
+    //final heightBody = mediaQuery.size.height - statusBar - kToolbarHeight;
+    //
+    //print(heightBody);
 
     return Scaffold(
       appBar: AppBar(
@@ -67,6 +68,9 @@ class HomePage extends StatelessWidget {
                 break;
                 case PopupMenuPages.form:
                   Navigator.of(context).pushNamed('/form');
+                break;
+                case PopupMenuPages.cidades:
+                  Navigator.of(context).pushNamed('/cidades');  
                 break;
               }
             },
@@ -111,6 +115,10 @@ class HomePage extends StatelessWidget {
                 PopupMenuItem<PopupMenuPages>(
                 value: PopupMenuPages.form,
                 child: Text('Formulario'),
+                ),
+                PopupMenuItem<PopupMenuPages>(
+                value: PopupMenuPages.cidades,
+                child: Text('Cidades'),
                 ),
             ];
           })
