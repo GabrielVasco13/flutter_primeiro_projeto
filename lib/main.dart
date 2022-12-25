@@ -14,6 +14,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/listview_page.dart';
 import 'package:flutter_primeiro_projeto/pages/scrolls/singlechildscrollview_pages.dart';
 import 'package:flutter_primeiro_projeto/pages/snackbar/snackbar_page.dart';
+import 'package:flutter_primeiro_projeto/pages/stack/stack_page.dart';
+import 'package:flutter_primeiro_projeto/pages/stack/stack_page2.dart';
 
 void main() {
   runApp(
@@ -41,12 +43,12 @@ class MyApp extends StatelessWidget {
 
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.purple[300],
+            backgroundColor: Colors.purple[700],
           )
         ),
 
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.purple[700]
+          backgroundColor: Colors.purple[800]
         ),
 
       ),
@@ -65,6 +67,8 @@ class MyApp extends StatelessWidget {
         '/snackbar': (_) => SnackbarPage(),
         '/form': (_) => FormPage(),
         '/cidades': (_) => CidadesPage(),
+        '/stack': (_) => StackPage(),
+        '/stack2': (_) => StackPage2(),
       },
     );
   }

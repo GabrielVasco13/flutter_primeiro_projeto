@@ -24,7 +24,11 @@ class ContainerPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(25),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black, blurRadius: 10, offset: Offset(10, 10)),
+                    color:
+                    Colors.black, 
+                      blurRadius: 10, 
+                      offset: Offset(10, 10)
+                    ),
                 BoxShadow(
                     color: Colors.purple,
                     blurRadius: 15,

@@ -8,9 +8,9 @@ class SnackbarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[600],
       appBar: AppBar(
         title: const Text('SnackBars'),
-        backgroundColor: Colors.purple[700],
       ),
       body: Center(
         child: Column(
@@ -20,7 +20,7 @@ class SnackbarPage extends StatelessWidget {
 
               final snackbar = SnackBar(
                   content: Text('Usuario logado'),
-                  backgroundColor: Colors.black45,
+                  backgroundColor: Colors.purple[300],
                 );
               ScaffoldMessenger.of(context).showSnackBar(snackbar);
             }, child: Text('Simple SnackBar')),
@@ -28,7 +28,7 @@ class SnackbarPage extends StatelessWidget {
             ElevatedButton(onPressed: () {
               final snackBar = SnackBar(
                     content: Text('Senha salvo com sucesso'),
-                    backgroundColor: Colors.purple[800],
+                    backgroundColor: Colors.purple[300],
                     action: SnackBarAction(label: 'Desfazer', onPressed: () {
                       print('fui clicado');
                     },) 
