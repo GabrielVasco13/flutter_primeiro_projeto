@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_primeiro_projeto/pages/botoes_rota%C3%A7%C3%A3o_texto/botoes_rotacao_texto_page.dart';
+import 'package:flutter_primeiro_projeto/pages/bottom_navigator_bar/bottom_navigator_bar_page.dart';
 import 'package:flutter_primeiro_projeto/pages/cidades/cidades_page.dart';
 import 'package:flutter_primeiro_projeto/pages/container/container_page.dart';
 import 'package:flutter_primeiro_projeto/pages/dialogs/dialogs_page.dart';
@@ -35,9 +36,9 @@ class MyApp extends StatelessWidget {
       title: 'Nubank sem api',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.purple[700],
+        primaryColor: Colors.purple[600],
         primaryColorLight: Colors.purple,
-        primaryColorDark: Colors.purple[900],
+        primaryColorDark: Colors.purple[800],
         
         // fontFamily: 'Roboto', font de texto padrão
 
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
         ),
 
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.purple[800]
+          backgroundColor: Colors.purple[700]
         ),
 
       ),
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/cidades': (_) => CidadesPage(),
         '/stack': (_) => StackPage(),
         '/stack2': (_) => StackPage2(),
+        '/bottomNavigatorBar': (_) => BottomNavigatorBarPage(),
       },
     );
   }
